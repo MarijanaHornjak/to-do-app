@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("./assets/workspace-1280538_1920.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: rgb(199, 164, 115);
+  font-family: "Poopins", sans-serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 1.5rem;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  color: rgb(226, 237, 167);
+
+  padding: 0.5rem;
+}
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-input,
+.todo-button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+.todo-button {
+  color: rgb(134, 101, 54);
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+.todo-button:hover {
+  background: rgb(134, 101, 54);
+  color: white;
+  cursor: pointer;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: rgb(134, 101, 54);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.todo li {
+  flex: 1;
+}
+.trash-btn,
+.complete-btn {
+  background-color: white;
+  border: none;
+  color: rgb(134, 101, 54);
+  padding: 1rem;
+
+  cursor: pointer;
+}
+.complete-btn {
+  color: rgb(97, 156, 7);
+}
+.complete-btn:hover {
+  background: rgb(97, 156, 7);
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+.trash-btn {
+  color: rgb(243, 102, 59);
+}
+.trash-btn:hover {
+  background: rgb(243, 102, 59);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+.completed {
+  text-decoration: line-through;
+  background: rgba(97, 156, 7, 0.2);
+}
+.fall {
+  transform: translateY(20rem) rotateY(20deg);
+  opacity: 0;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: black;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: large;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: white;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
