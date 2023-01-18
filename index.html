@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Square+Peg&family=Zilla+Slab:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -21,20 +21,28 @@
     <title>To do List</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <h1>Your Daily Tasks</h1>
     </header>
-    <form>
-      <input type="text" class="todo-input" placeholder="Write your tasks..." />
-      <button class="todo-button" type="submit">
-        <i class="fas fa-plus-square"></i>
-      </button>
-      <div class="select">
-        <select name="todos" class="filter-todo">
-          <option value="all">All</option>
-          <option value="completed">Completed</option>
-          <option value="uncompleted">Uncompleted</option>
-        </select>
+    <form class="form">
+      <div class="container">
+        <div class="write_task">
+          <input
+            type="text"
+            class="todo-input"
+            placeholder="Write your tasks..."
+          />
+          <button class="todo-button" type="submit">
+            <i class="fas fa-plus-square"></i>
+          </button>
+        </div>
+        <div class="select">
+          <select name="todos" class="filter-todo">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+          </select>
+        </div>
       </div>
     </form>
     <div class="todo-container">

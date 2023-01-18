@@ -3,64 +3,104 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  font-size: 62.5%;
+}
 body {
-  background-image: url("./assets/workspace-1280538_1920.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  color: rgb(199, 164, 115);
-  font-family: "Poopins", sans-serif;
-  min-height: 100vh;
+  line-height: 1;
+  color: #333;
+  font-weight: 400;
+  background-image: url("./assets/desktop-3261767_1920.jpg");
 }
-header {
-  font-size: 1.5rem;
-  min-height: 20vh;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 9.6rem;
+  font-family: "Roboto", sans-serif;
+}
+.header h1 {
+  color: rgb(147, 35, 102);
+  font-size: 5.8rem;
+  background-color: rgba(250, 249, 249, 0.5);
+  padding: 0.5rem 1.6rem;
+}
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+}
+.form {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-header h1 {
-  color: rgb(226, 237, 167);
 
-  padding: 0.5rem;
+  margin: 4.6rem 0;
 }
-form {
-  min-height: 20vh;
+.write_task {
+  max-width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
-.todo-input,
-.todo-button {
-  padding: 0.5rem;
+.todo-input {
+  max-width: 100%;
+  padding: 1.6rem 20.6rem 1.6rem 1.2rem;
   font-size: 2rem;
   border: none;
-  background: white;
-}
-.todo-button {
-  color: rgb(134, 101, 54);
-  cursor: pointer;
-  transition: all 0.6s ease;
-}
-.todo-button:hover {
-  background: rgb(134, 101, 54);
-  color: white;
-  cursor: pointer;
+  font-weight: 600;
+  color: inherit;
+  box-shadow: inset 0px 0px 4px 0px #932366;
+  border-radius: 9px;
+  flex-shrink: 1;
 }
 
+.todo-input:focus {
+  outline: none;
+}
+.todo-button {
+  width: 4.8rem;
+  height: 4.8rem;
+  font-size: 4.4rem;
+  border: none;
+  color: rgb(147, 35, 102);
+  background-color: transparent;
+}
+.filter-todo {
+  width: 16rem;
+  height: 4.2rem;
+  border: none;
+}
 .todo-container {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 0 6.8rem;
+  max-width: 100%;
+}
+.todo {
+  display: flex;
+  /* max-width: 120rem; */
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  border-radius: 9px;
+  box-shadow: inset 0px 0px 4px 0px #932366;
 }
 .todo-list {
-  min-width: 30%;
   list-style: none;
+  width: 100rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
 }
 .todo {
   margin: 0.5rem;
+
   background: white;
-  color: rgb(134, 101, 54);
+  color: rgb(24, 17, 6);
   font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
@@ -96,7 +136,7 @@ form {
   transition: all 0.3s ease-in-out;
 }
 .todo-item {
-  padding: 0rem 0.5rem;
+  font-size: 2rem;
 }
 .fa-trash,
 .fa-check {
@@ -110,17 +150,20 @@ form {
   transform: translateY(20rem) rotateY(20deg);
   opacity: 0;
 }
-select {
+/* select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   outline: none;
   border: none;
-}
+  flex-shrink: 2;
+} */
 .select {
   margin: 1rem;
-  position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 select {
   color: black;
@@ -128,8 +171,9 @@ select {
   cursor: pointer;
   padding: 1rem;
   font-size: large;
+  flex-shrink: 2;
 }
-.select::after {
+/* .select::after {
   content: "\25BC";
   position: absolute;
   background: white;
@@ -138,4 +182,43 @@ select {
   padding: 1rem;
   pointer-events: none;
   transition: all 0.3s ease;
+} */
+
+/* Tablet (768/16=48em */
+@media (max-width: 48em) {
+  html {
+    font-size: 56.2%;
+  }
+  .header h1 {
+    font-size: 5rem;
+  }
+  .todo-input {
+    padding: 1.2rem 20rem 1.2rem 1rem;
+  }
+  .todo {
+    padding: 1rem;
+  }
+}
+/* 544px/16=34em */
+@media (max-width: 34em) {
+  html {
+    font-size: 50%;
+  }
+  .todo {
+    padding: 0.8rem;
+  }
+}
+
+/* Mobile L (425px) */
+
+@media (max-width: 26.5em) {
+  html {
+    font-size: 46%;
+  }
+  .todo-container {
+    padding: 0 4rem;
+  }
+  .todo-input {
+    padding: 1.2rem 2rem 1.2rem 1rem;
+  }
 }
